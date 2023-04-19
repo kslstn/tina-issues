@@ -13,6 +13,22 @@ const schema = defineSchema({
           label: "Main Content",
           type: "rich-text",
           isBody: true,
+          templates: [
+            {
+              label: 'Test label',
+              name: 'test',
+              nameOverride: 'my test name override',
+              match: {
+                start: '{',
+                end: '}',
+              },
+              fields: [{
+                label: 'Label',
+                name: 'name',
+                type: 'boolean',
+              }]
+            },
+          ],          
         },
       ],
       ui: {
