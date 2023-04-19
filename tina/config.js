@@ -22,11 +22,6 @@ const schema = defineSchema({
                 start: '{',
                 end: '}',
               },
-              fields: [{
-                label: 'Label',
-                name: 'name',
-                type: 'boolean',
-              }]
             },
           ],          
         },
