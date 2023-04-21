@@ -70,12 +70,9 @@ const schema = defineSchema({
 });
 
 export const config = defineConfig({
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || // Vercel branch env
-    process.env.HEAD, // Netlify branch env
-  token: process.env.TINA_TOKEN,
+  clientId: '61a2a102-eb7b-4296-b210-2f69045033c6',
+  branch: 'main',
+  token: 'na7cf2b57fca76a183819786f499661beb2b1ec18',
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
