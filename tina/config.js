@@ -7,30 +7,63 @@ const schema = defineSchema({
       name: "page",
       path: "content/page",
       format: "mdx",
-      fields: [
+      templates: [
         {
-          name: "body",
-          label: "Main Content",
-          type: "rich-text",
-          isBody: true,
-          templates: [
+          name: 'content',
+          label: 'Content Page',
+          fields: [
             {
-              label: 'Test label',
-              name: 'test',
-              nameOverride: 'my test name override',
-              match: {
-                start: '{',
-                end: '}',
-              },
-              fields: [{
-                label: 'Label',
-                name: 'name',
-                type: 'boolean',
-              }]
+              name: "body",
+              label: "Main Content",
+              type: "rich-text",
+              isBody: true,
+              templates: [
+                {
+                  label: 'Test label',
+                  name: 'test',
+                  match: {
+                    start: '{',
+                    end: '}',
+                  },
+                  fields: [{
+                    label: 'Label',
+                    name: 'name',
+                    type: 'boolean',
+                  }]
+                },
+              ],
             },
-          ],          
+          ],
+        },
+        {
+          name: 'marketing',
+          label: 'Marketing Page',
+          fields: [
+            {
+              name: "body",
+              label: "Main Content",
+              type: "rich-text",
+              isBody: true,
+              templates: [
+                {
+                  label: 'Test label',
+                  name: 'test',
+                  match: {
+                    start: '{',
+                    end: '}',
+                  },
+                  fields: [{
+                    label: 'Label',
+                    name: 'name',
+                    type: 'boolean',
+                  }]
+                },
+              ],
+            },
+          ],
         },
       ],
+      
       ui: {
         router: ({ document }) => {
           if (document._sys.filename === "home") {
