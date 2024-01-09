@@ -1,4 +1,6 @@
 import { defineConfig, defineSchema } from "tinacms";
+import { tinaTableTemplate } from 'tinacms'
+
 
 const schema = defineSchema({
   collections: [
@@ -13,6 +15,7 @@ const schema = defineSchema({
           label: "Main Content",
           type: "rich-text",
           isBody: true,
+          templates: [tinaTableTemplate]
         },
       ],
       ui: {
